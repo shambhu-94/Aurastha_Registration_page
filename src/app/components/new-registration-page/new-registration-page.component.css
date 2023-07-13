@@ -1,0 +1,13 @@
+form{
+    height: 100vh;
+    width: 500px;
+    text-align: center;
+}
+.container{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.row{
+    display: flex;
+}
