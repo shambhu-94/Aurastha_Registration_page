@@ -1,0 +1,194 @@
+
+<!Doctype html>
+<html>
+    <head><link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script></head>
+<div class="container register">
+            <h3 class="register-heading">Employee Details</h3>
+                    <div class="row register-form">
+                        <div class="col-md-6">
+                            <div class="form-group"><label for="Employee_Id">Employee ID:</label>
+                                <input type="text" class="form-control" placeholder="Employee ID" id="Employee_Id" required [(ngModel)]="RegistrationObj.Employee_Id"/>
+                            </div>
+                            <div class="form-group"><label>Employee Name:</label>
+                                <input type="text" class="form-control" placeholder="Employee Name" [(ngModel)]="RegistrationObj.Employee_name"/>
+                            </div>
+                            <div class="form-group"><label>PAN Number:</label>
+                                <input type="text" class="form-control" placeholder="PAN Number"  [(ngModel)]="RegistrationObj.pan_number"/>
+                            </div>
+                            <div class="form-group"><label> Aadhar Number: </label>
+                                <input type="number" class="form-control" placeholder="Aadhar Number"  [(ngModel)]="RegistrationObj.aadhar_number" />
+                            </div>
+                            
+                            <div class="form-group"><label> Primary Contact Number: </label>
+                                <input type="number" class="form-control" placeholder="Primary Number"    [(ngModel)]="RegistrationObj.primaryContactNumber"/>
+                            </div>
+                            <div class="form-group"><label> Secondary Contact Number: </label>
+                                <input type="number" class="form-control" placeholder="Secondary Number"   [(ngModel)]="RegistrationObj.SecondaryContactNumber"/>
+                            </div>
+                            <div class="form-group"><label> Official Contact Number: </label>
+                                <input type="number" class="form-control" placeholder="Official Number"  [(ngModel)]="RegistrationObj.officialContactNumber"/>
+                            </div>
+                            <div class="form-group"><label> Personal Email ID: </label>
+                                <input type="email" class="form-control" placeholder="Personal Email ID"  [(ngModel)]="RegistrationObj.personalEmail"/>
+                            </div>
+                            <div class="form-group"><label> Official Email ID: </label>
+                                <input type="email" class="form-control" placeholder="Official Email ID"  [(ngModel)]="RegistrationObj.officialEmail"/>
+                            </div>
+                            <div class="form-group"><label>Address: </label>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="House Number *"  [(ngModel)]="RegistrationObj.addressDetails.addressType"/>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Address *"  [(ngModel)]="RegistrationObj.addressDetails.address" />
+                                    </div>
+                                     <div class="col">
+                                        <input type="text" class="form-control" placeholder="City *"  [(ngModel)]="RegistrationObj.addressDetails.city"/>
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" class="form-control" placeholder="Pincode *"  [(ngModel)]="RegistrationObj.addressDetails.pincode"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group"><label> Nominee Name: </label>
+                                <input type="text" class="form-control" placeholder="Nominee Name *"  [(ngModel)]="RegistrationObj.nomineeName"/>
+                            </div>
+                            <div class="form-group"><label> Nominee Relation: </label>
+                                <input type="text" class="form-control" placeholder="Nominee Name *"  [(ngModel)]="RegistrationObj.nomineeRelation" />
+                            </div>
+                            <div class="form-group"><label> Nominee Signature: </label>
+                                <input type="text" class="form-control" placeholder="Nominee Name *"  [(ngModel)]="RegistrationObj.nomineeSignature" />
+                            </div>
+                            <div class="form-group"><label> Amount to Nominee in rupees: </label>
+                                <input type="number" class="form-control"  placeholder="Amount in Rupees *"  [(ngModel)]="RegistrationObj.amountInRupees" />
+                            </div>
+                            <div class="form-group"><label>Reference List: </label>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Reference Type *"  [(ngModel)]="RegistrationObj.referenceList.refType"/>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Name *"  [(ngModel)]="RegistrationObj.referenceList.refName"/>
+                                    </div>
+                                     <div class="col">
+                                        <input type="text" class="form-control" placeholder="Relationship *"  [(ngModel)]="RegistrationObj.referenceListrefRelation"/>
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" class="form-control" placeholder="Contact Number *"  [(ngModel)]="RegistrationObj.RefContactNum"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group"><label>Bank Account Details: </label>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Bank Name *"  [(ngModel)]="RegistrationObj.bankDetails.bankName" />
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" class="form-control" placeholder="Account Number *"  [(ngModel)]="RegistrationObj.bankDetails.accountNumber"/>
+                                    </div>
+                                     <div class="col">
+                                        <input type="text" class="form-control" placeholder="IFSC Code *"  [(ngModel)]="RegistrationObj.bankDetails.IFSCcode" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group"><label> Designation: </label>
+                                <input type="text" class="form-control" placeholder="Designation *"  [(ngModel)]="RegistrationObj.Designation" />
+                            </div>
+                            <div class="form-group"><label>Responsibilities: </label>
+                                <input type="text" class="form-control" placeholder="Responsibilities *"  [(ngModel)]="RegistrationObj.Responsibilities"/>
+                            </div>
+                            <div class="form-group"><label> Work Start Time: </label>
+                                <input type="time" class="form-control" placeholder="Work Start Time *"  [(ngModel)]="RegistrationObj.workStartTime"/>
+                            </div>
+                            <div class="form-group"><label> Work End Time: </label>
+                                <input type="time" class="form-control" placeholder="Work End Time *"  [(ngModel)]="RegistrationObj.workEndTime" />
+                            </div>
+                            <div class="form-group"><label> Joining Date: </label>
+                                <input type="date" class="form-control" placeholder="Joining Date *"  [(ngModel)]="RegistrationObj.joiningDate"/>
+                            </div>
+                            <!--<div class="form-group"><label> isDeleted: </label>
+                                <input type="number" class="form-control" placeholder="isDeleted *"  [(ngModel)]="RegistrationObj.isDeleted"/>
+                            </div>
+                            <div class="form-group"><label> CreadtedBy: </label>
+                                <input type="text" class="form-control" placeholder="CreadtedBy *"  [(ngModel)]="RegistrationObj.CreadtedBy" />
+                            </div>
+                            <div class="form-group"><label>CreatedDate: </label>
+                                <input type="datetime-local" class="form-control" placeholder="CreatedDate *"  [(ngModel)]="RegistrationObj.CreatedDate"/>
+                            </div>-->
+
+                           
+                            <!--<div class="form-group">
+                                <div class="maxl">
+                                    <label class="radio inline"> 
+                                        <input type="radio" name="gender" value="male" checked >
+                                        <span> Male </span> &nbsp;
+                                    </label>
+                                    <label class="radio inline"> 
+                                        <input type="radio" name="gender" value="female">
+                                        <span>Female </span> 
+                                    </label>
+                                </div>
+                            </div>-->
+                        </div>
+                      <!--  <div class="split left">
+                            <div class="centered">
+                              <img src="img_avatar2.png" alt="Avatar woman">
+                              <h2>Jane Flex</h2>
+                              <p>Some text.</p>
+                            </div>
+                          </div>
+                          
+                          <div class="split right">
+                            <div class="centered">
+                              <img src="img_avatar.png" alt="Avatar man">
+                              <h2>John Doe</h2>
+                              <p>Some text here too.</p>
+                            </div>
+                          </div>-->
+                        <button class="btnRegister" (click)="register()">Register</button>
+
+                    </div>
+                </div>
+               <!-- <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <h3  class="register-heading">Apply as a Hirer</h3>
+                    <div class="row register-form">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="First Name *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone *" value="" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Password *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Confirm Password *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
+                                    <option>What is your Birthdate?</option>
+                                    <option>What is Your old Phone Number</option>
+                                    <option>What is your Pet Name?</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="`Answer *" value="" />
+                            </div>
+                            <input type="submit" class="btnRegister"  value="Register"/>
+                        </div>
+                    </div>
+                </div>-->
+
+</html>
