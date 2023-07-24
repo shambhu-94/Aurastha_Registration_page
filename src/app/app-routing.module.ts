@@ -6,7 +6,10 @@ import { TestingLoginPageOnlyComponent } from './components/testing-login-page-o
 import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
 import { RegistrationTestingComponent } from './components/registration-testing/registration-testing.component';
 import { NewRegistrationPageComponent } from './components/new-registration-page/new-registration-page.component';
+<<<<<<< HEAD
 import { LatestRegistrationFormComponent } from './components/latest-registration-form/latest-registration-form.component';
+=======
+>>>>>>> 33cc08e0db1abcf23fcd65e3d911f69e83c6a0cb
 
 const routes: Routes = [
   {path:'loginPreviousOne', component: LoginComponent},
@@ -15,7 +18,10 @@ const routes: Routes = [
   {path: 'registration', component:RegistrationFormComponent},
   {path: 'registrationTesting', component:RegistrationTestingComponent},
   {path: 'newRegistration', component:NewRegistrationPageComponent},
+<<<<<<< HEAD
   {path: 'latest', component:LatestRegistrationFormComponent},
+=======
+>>>>>>> 33cc08e0db1abcf23fcd65e3d911f69e83c6a0cb
   {path:'', redirectTo: "login", pathMatch: 'full'}
 ];
 
